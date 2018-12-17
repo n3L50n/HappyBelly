@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/background_happy_belly_listing">
+
+    <ImageView
+        android:id="@+id/happy_belly_listing_image"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/happy_belly_listing_content_description"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/happy_belly_listing_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/happy_belly_listing_image"
+        tool:text="Gus's Fried Chicken" />
+
+    <TextView
+        android:id="@+id/happy_belly_listing_rating_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="#444"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:text="@string/average_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/happy_belly_listing_rating"/>
+
+    <TextView
+        android:id="@+id/happy_belly_listing_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="#222"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/happy_belly_listing_price"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tool:text="4.0" />
+
+    <TextView
+        android:id="@+id/happy_belly_listing_price_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="italic"
+        android:textColor="#444"
+        android:textSize="12sp"
+        android:text="@string/average_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/happy_belly_listing_review"/>
+
+    <TextView
+        android:id="@+id/happy_belly_listing_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#444"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/happy_belly_listing_review"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tool:text="$$" />
+
+    <TextView
+        android:id="@+id/happy_belly_listing_review"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happy_belly_listing_image"
+        tool:text="This place is the best! I come here every week. The staff are lovely and vivacious. Come here every chance you get. I went here with my family and we all got the 3 piece tender except my brother got 2 piece dark" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="105dp" />
+
+</android.support.constraint.ConstraintLayout>

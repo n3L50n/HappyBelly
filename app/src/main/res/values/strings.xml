@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Happy Belly</string>
+    <string name="happy_belly_listing_content_description">An image associated with the restaurant list item</string>
+    <string name="average_rating">Average Rating:</string>
+    <string name="average_price">Average Price:</string>
+    <string name="search_hint">Search Restaurants</string>
+    <string name="empty_title">Welcome to Happy Belly</string>
+    <string name="empty_description">A tool for helping you find the best restaurants to address your current digestive situation.</string>
+    <string name="happy_belly">Happy Belly</string>
+    <string name="sad_belly">Sad Belly</string>
+    <string name="happy_belly_question">How\'re you feelin\'?</string>
+    <string name="location_title">Oh, where are you?</string>
+    <string name="location_description">For starters, to find restaurants near you, we\'ve got to get permission from you</string>
+    <string name="allow_location">Allow Location</string>
+</resources>
