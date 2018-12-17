@@ -12,4 +12,6 @@
     <string name="location_title">Oh, where are you?</string>
     <string name="location_description">For starters, to find restaurants near you, we\'ve got to get permission from you</string>
     <string name="allow_location">Allow Location</string>
+    <string name="happy_belly_waiting">Just a moment, we\'ll find you some great options!</string>
+    <string name="sad_belly_waiting">Oh, understood. We\'ll find you some healthy options.</string>
 </resources>

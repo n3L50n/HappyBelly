@@ -7,11 +7,9 @@ data class SearchResult(
     @SerializedName("id") val id: String,
     @SerializedName("name") val name: String,
     @SerializedName("image_url") val imageUrl: String,
-    //@SerializedName("review") val review: String,
     @SerializedName("rating") val rating: Double,
     @SerializedName("price") val price: String,
     @SerializedName("categories") val categories: List<CategoryAlias>
-
 )
 
 data class SearchResultReview(

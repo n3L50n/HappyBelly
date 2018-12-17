@@ -41,7 +41,6 @@ class HappyBellyRepositoryImplemented: Router {
             gson.fromJson(business.asJsonObject, SearchResult::class.java)
         }
 
-        Log.v(tag, "data:::::: $businesses")
         return businesses?: emptyList()
     }
 
@@ -52,7 +51,6 @@ class HappyBellyRepositoryImplemented: Router {
             val gson = Gson()
             gson.fromJson(review.asJsonObject, SearchResultReview::class.java)
         }
-        //Log.v(tag, "review found for $id with $reviews")
         return reviews?.get(0)
     }
 }

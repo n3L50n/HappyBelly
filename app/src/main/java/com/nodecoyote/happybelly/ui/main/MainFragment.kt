@@ -62,6 +62,8 @@ class MainFragment : Fragment() {
         setupRecycler()
         checkLocation()
         setHasOptionsMenu(true)
+        setupSadBelly()
+        setupHappyBelly()
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?) {
@@ -146,6 +148,22 @@ class MainFragment : Fragment() {
                 locationCallback,
                 null
             )
+        }
+    }
+
+    private fun setupSadBelly(){
+        empty_happy_belly_negative.setOnClickListener {
+            viewModel.search("healthy")
+            context?.buttonFeedback()
+            Toast.makeText(context, resources.getString(R.string.sad_belly_waiting), Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun setupHappyBelly(){
+        empty_happy_belly_positive.setOnClickListener {
+            viewModel.search("beer")
+            context?.buttonFeedback()
+            Toast.makeText(context, resources.getString(R.string.happy_belly_waiting), Toast.LENGTH_LONG).show()
         }
     }
 
