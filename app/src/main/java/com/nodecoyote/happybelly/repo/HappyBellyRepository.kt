@@ -52,7 +52,7 @@ class HappyBellyRepositoryImplemented: Router {
             val gson = Gson()
             gson.fromJson(review.asJsonObject, SearchResultReview::class.java)
         }
-        Log.v(tag, "review found for $id with $reviews")
+        //Log.v(tag, "review found for $id with $reviews")
         return reviews?.get(0)
     }
 }

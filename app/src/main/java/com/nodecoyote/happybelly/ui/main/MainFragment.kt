@@ -113,12 +113,15 @@ class MainFragment : Fragment() {
 
     private fun checkLocation() {
         activity?.let { mainActivity ->
-            val locationPermission =
-                ContextCompat.checkSelfPermission(mainActivity, Manifest.permission.ACCESS_COARSE_LOCATION)
-            if (locationPermission != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(mainActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 happy_belly_flipper.displayedChild = location
                 happy_belly_location_allow.setOnClickListener {
-                    requestPermissions()
+                    if (ContextCompat.checkSelfPermission(mainActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                        requestPermissions()
+                    } else {
+                        setupLocation()
+                        happy_belly_flipper.displayedChild = empty
+                    }
                     context?.buttonFeedback()
                 }
             } else {
